@@ -28,6 +28,7 @@ public class Formulario {
 	void testNombre() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement nombre = driver1.findElement(By.id("nombre"));
+		nombre.sendKeys("Juan Pérez");
 		assertNotNull(nombre);
 	}
 
@@ -35,6 +36,7 @@ public class Formulario {
 	void testApelido() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement apellidos = driver1.findElement(By.id("apellidos"));
+		apellidos.sendKeys("Juan Pérez");
 		assertNotNull(apellidos);
 	}
 
@@ -42,6 +44,7 @@ public class Formulario {
 	void testSexoFemenino() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement sexoFemenino = driver1.findElement(By.id("sexoFemenino"));
+		sexoFemenino.click();
 		assertNotNull(sexoFemenino);
 	}
 
@@ -49,13 +52,15 @@ public class Formulario {
 	void testSexoMasculino() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement sexoMasculino = driver1.findElement(By.id("sexoMasculino"));
+		sexoMasculino.click();
 		assertNotNull(sexoMasculino);
 	}
 
 	@Test
 	void testCorreo() {
 		driver1.get("http://localhost:3000/formulario");
-		WebElement correo = driver1.findElement(By.id("correo"));
+		WebElement correo = driver1.findElement(By.id("email"));
+		correo.sendKeys("Juanpa@iesnervion.es");
 		assertNotNull(correo);
 	}
 
@@ -63,6 +68,7 @@ public class Formulario {
 	void testCasilaVerificacion1() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement verificacion1 = driver1.findElement(By.id("verificacion1"));
+		verificacion1.click();
 		assertNotNull(verificacion1);
 	}
 
@@ -70,6 +76,7 @@ public class Formulario {
 	void testCasilaVerificacion2() {
 		driver1.get("http://localhost:3000/formulario");
 		WebElement verificacion2 = driver1.findElement(By.id("verificacion2"));
+		verificacion2.click();
 		assertNotNull(verificacion2);
 	}
 
